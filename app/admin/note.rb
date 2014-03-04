@@ -13,13 +13,14 @@ ActiveAdmin.register Note do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-   permit_params :title, :noteDesc, :image, :thumbImage, :beacons
+   permit_params :title, :noteDesc, :image, :thumbImage, :beacons, :summary
   form do |f|
      f.inputs "Details" do
         f.input :title
         f.input :noteDesc
         f.input :image
         f.input :thumbImage
+        f.input :summary
         f.input :beacons, :as => :check_boxes
      end
      f.actions

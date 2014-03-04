@@ -18,4 +18,11 @@ json.array! @beacon do |beacon|
   		json.noteType note.noteType
   	end
   end
+  json.mainNotes beacon.notes do |note|
+	  json.id note.id
+	  json.title note.title
+	  json.image note.image
+	  json.thumbImage note.thumbImage
+	  json.noteType note.noteType
+   end
 end

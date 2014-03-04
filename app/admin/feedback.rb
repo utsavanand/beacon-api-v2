@@ -8,6 +8,7 @@ ActiveAdmin.register Feedback do
   #
   # or
   #
+  permit_params :question, :op1, :op2, :op3, :op4, :brand_id
   # permit_params do
   #  permitted = [:permitted, :attributes]
   #  permitted << :other if resource.something?

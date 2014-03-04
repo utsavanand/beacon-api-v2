@@ -6,7 +6,6 @@ class CreateExpressions < ActiveRecord::Migration
       t.string :expTitle
       t.string :expDesc
       t.string :expLink
-
       t.timestamps
     end
   end

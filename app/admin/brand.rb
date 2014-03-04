@@ -6,6 +6,7 @@ ActiveAdmin.register Brand do
   #
   # permit_params :list, :of, :attributes, :on, :model
   #
+  permit_params :name, :logo, :colorMajor, :colorMinor
   # or
   #
   # permit_params do

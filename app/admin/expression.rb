@@ -8,6 +8,7 @@ ActiveAdmin.register Expression do
   #
   # or
   #
+  permit_params :endptType, :endptValue, :expTitle, :expDesc, :expLink, :brand_id
   # permit_params do
   #  permitted = [:permitted, :attributes]
   #  permitted << :other if resource.something?

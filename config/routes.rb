@@ -1,6 +1,11 @@
 BeaconApi::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+  match "api/getDataForBeacon" => "api#getDataForBeacon", via: [:get, :post]    
+  match "api/getChildBeacons" => "api#getChildBeacons", via: [:get, :post]    
+  match "api/getBrandFeedbacks" => "api#getBrandFeedbacks", via: [:get, :post]    
+  match "api/getBrandExpressions" => "api#getBrandExpressions", via: [:get, :post]    
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -6,7 +6,6 @@ class CreateBeacons < ActiveRecord::Migration
       t.string :image
       t.string :thumbImage
       t.text :beaconDesc
-
       t.timestamps
     end
   end

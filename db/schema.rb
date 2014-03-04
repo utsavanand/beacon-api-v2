@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140226135658) do
+ActiveRecord::Schema.define(version: 20140304091118) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -46,13 +46,6 @@ ActiveRecord::Schema.define(version: 20140226135658) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
-  create_table "beacon_notes", primary_key: "beaconNote_id", force: true do |t|
-    t.integer "beacon_id"
-    t.integer "note_id"
-  end
-
-  add_index "beacon_notes", ["beaconNote_id"], name: "sqlite_autoindex_beacon_notes_1", unique: true
-
   create_table "beacons", force: true do |t|
     t.string   "uid"
     t.string   "title"
@@ -63,6 +56,11 @@ ActiveRecord::Schema.define(version: 20140226135658) do
     t.datetime "updated_at"
     t.integer  "brand_id"
     t.integer  "parentBeacon_id"
+  end
+
+  create_table "beacons_notes", id: false, force: true do |t|
+    t.integer "beacon_id"
+    t.integer "note_id"
   end
 
   create_table "brands", force: true do |t|
@@ -104,6 +102,7 @@ ActiveRecord::Schema.define(version: 20140226135658) do
     t.integer  "noteType"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "summary"
   end
 
 end

@@ -13,19 +13,7 @@ ActiveAdmin.register Note do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  index do
-    column :id do |note|
-      link_to note.id, [:admin, note]
-    end
-    column :title
-    column :noteDesc
-    column :image
-    column :thumbImage
-    column "Beacon" do |note|
-      note.beacons.map{ |p| p.title }.join(', ')
-    end
-  end
-   permit_params :title, :noteDesc, :image, :thumbImage, :beacons, :beacon_ids, :beacon_notes_ids
+   permit_params :title, :noteDesc, :image, :thumbImage, :beacons
   form do |f|
      f.inputs "Details" do
         f.input :title

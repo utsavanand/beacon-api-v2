@@ -16,6 +16,8 @@ json.array! @beacon do |beacon|
   		json.image note.image
   		json.thumbImage note.thumbImage
   		json.noteType note.noteType
+      json.noteDesc note.noteDesc
+      json.summary note.summary
   	end
   end
   json.mainNotes beacon.notes do |note|
@@ -24,5 +26,7 @@ json.array! @beacon do |beacon|
 	  json.image note.image
 	  json.thumbImage note.thumbImage
 	  json.noteType note.noteType
+    json.noteDesc note.noteDesc
+    json.summary note.summary
    end
 end
